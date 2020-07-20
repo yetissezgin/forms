@@ -1,0 +1,9 @@
+<form [formGroup]="loginForm" (ngSubmit)="submitHandler()">
+    <input type="text" name="email" formControlName='email'/>
+    <div *ngIf="email.invalid && email.touched">this field is required!</div>
+    <br/>
+    <input type="password" name="password" formControlName='password' /><br/>
+    <div *ngIf="password.invalid && password.touched">this field is required!</div>
+
+    <button type="submit">Login</button>
+</form>

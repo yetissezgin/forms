@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center align-items-center" style="height:100vh;">
+    <div class="w-25 mt-10" >
+        <form #login="ngForm" class="d-flex justify-content-center align-items-center flex-direction-column" style="flex-direction:column;" (ngSubmit)="submitHandler(login.value)">
+            <input type="text" required #email="ngModel" class="form-control" placeholder="email" name="email" ngModel />
+            <div class='red' *ngIf="email.invalid && email.touched" >This field is required</div><br />
+            
+            <input type="password" required #password="ngModel" class="form-control" placeholder="password" name="password" ngModel />
+            <div class='red' *ngIf="password.invalid && password.touched" >This field is required</div><br />
+
+            
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+    </div>
+</div>
